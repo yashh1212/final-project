@@ -373,8 +373,7 @@ database = "user_info_ohd7"
 user = "user_info_ohd7_user" 
 password = "Bf97VJmCeSuKDgezO4w6qA5QNZyoO5Z2" 
 
-try:
-    connection = psycopg2.connect(
+connection = psycopg2.connect(
         host=host,
         database=database,
         user=user,
