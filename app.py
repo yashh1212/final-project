@@ -5,6 +5,7 @@ import bcrypt
 import uuid
 import smtplib
 import random
+import psycopg2
 import string
 import traceback
 import numpy as np
@@ -365,12 +366,20 @@ def predict(a):
 app = Flask(__name__)
 app.secret_key = 'yash'
 
-conn = pymysql.connect(
-    host="localhost",
-    user="root",
-    password="yash1212",
-    database="user_info",
-)
+
+# Replace these values with your PostgreSQL server information
+host = "dpg-ckm1pr3j89us739lt1j0-a" 
+database = "user_info_ohd7" 
+user = "user_info_ohd7_user" 
+password = "Bf97VJmCeSuKDgezO4w6qA5QNZyoO5Z2" 
+
+try:
+    conn = psycopg2.connect(
+        host=host,
+        database=database,
+        user=user,
+        password=password
+    )
 cursor = conn.cursor()
 
 @app.route('/userlogin')
