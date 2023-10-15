@@ -9,6 +9,7 @@ charset-normalizer
 colorama
 gunicorn
 cryptography
+psycopg2
 cssselect2
 defusedxml
 EasyProcess
