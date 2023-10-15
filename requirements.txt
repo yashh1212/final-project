@@ -2,7 +2,6 @@ Babel==2.13.0
 Brotli==1.1.0
 certifi==2023.7.22
 cffi
-sklearn
 scikit-learn
 bcrypt
 charset-normalizer
