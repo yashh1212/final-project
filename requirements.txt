@@ -4,6 +4,7 @@ certifi==2023.7.22
 cffi
 charset-normalizer
 colorama
+gunicorn
 cryptography
 cssselect2
 defusedxml
