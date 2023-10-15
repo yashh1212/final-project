@@ -374,13 +374,13 @@ user = "user_info_ohd7_user"
 password = "Bf97VJmCeSuKDgezO4w6qA5QNZyoO5Z2" 
 
 try:
-    conn = psycopg2.connect(
+    connection = psycopg2.connect(
         host=host,
         database=database,
         user=user,
         password=password
     )
-cursor = conn.cursor()
+cursor = connection.cursor()
 
 @app.route('/userlogin')
 def userregister():
