@@ -1,12 +1,11 @@
-﻿Babel==2.13.0
+Babel==2.13.0
 gunicorn
 bcrypt
 scikit-learn
-email.mime.text
-email.mime.multipart 
-datetime 
-flask 
-fpdf 
+datetime
+flask
+fpdf
+email
 Brotli==1.1.0
 certifi==2023.7.22
 cffi
@@ -25,7 +24,7 @@ InvoiceGenerator==1.1.0
 mss
 numpy
 pandas
-package-name==0.1
+package-name==0.1  # Replace 'package-name' with the actual package name and version.
 pdfcrowd==5.14.0
 pdfkit==1.0.0
 Pillow
@@ -47,7 +46,7 @@ requests==2.31.0
 six==1.16.0
 soupsieve
 tinycss2==1.2.1
-typing_extensions
+typing-extensions  # Corrected package name
 urllib3
 weasyprint
 webencodings
