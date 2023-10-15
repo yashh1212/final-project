@@ -1,9 +1,7 @@
 ﻿Babel==2.13.0
 gunicorn
 bcrypt
-sklearn
-sklearn.linear_model 
-sklearn.metrics 
+scikit-learn
 email.mime.text
 email.mime.multipart 
 datetime 
