@@ -373,13 +373,13 @@ database = "user_info"
 user = "postgres" 
 password = "yash1212" 
 
-conn = psycopg2.connect(
+connection = psycopg2.connect(
         host=host,
         database=database,
         user=user,
         password=password
     )
-cursor = conn.cursor()
+cursor = connection.cursor()
 
 @app.route('/userlogin')
 def userregister():
@@ -467,7 +467,7 @@ def success():
                 
                         if cursor.execute("INSERT INTO patient_appointment (patient_name, patient_age, patient_no, doctor_name, appointment_date, appointment_schedule, payment_status, patient_gender,appointment_id) VALUES (%s, %s, %s, %s, %s, %s,%s, %s, %s)",
                                         (pt_name, DOB, pt_phone, doctor_name, date, app_time, payment, pt_gender,app_id1)):
-                            conn.commit()
+                            connection.commit()
                             flag=session['flag']=True
                             return render_template('paymentdetail.html', pt_name=pt_name, Dr_id=Doctor_id,appointment_id= app_id1,Dr_name=doctor_name,Appoinment_date=date, hospital_address=address_hspital, Appoinment_time=app_time,pdf_name=pdf_name)
             else:
@@ -528,7 +528,7 @@ def appointmentdeatil():
 
         if cursor.execute("INSERT INTO appointment_info (paient_name, patient_email, phone, pt_gender, dob, appointment_date, app_time) VALUES (%s, %s, %s, %s, %s, %s, %s)",
                         (pt_name, pt_email, pt_phone, pt_gender, DOB, date, app_time)):
-            conn.commit()
+            connection.commit()
             print("data insert successfully")
             return redirect('/detailconfirm')
         else:
@@ -792,7 +792,7 @@ def add_user():
        
         cursor.execute("INSERT INTO login__data (firstname, lastname, email, mobile_no, password, gender) VALUES (%s, %s, %s, %s, %s, %s)",
                        (fname, lname, email, mobile, hashed_password, gender))
-        conn.commit()
+        connection.commit()
         flash("user registered successfully!", "success")
         return render_template('userregister.html')
    else:
@@ -821,7 +821,7 @@ def add_doctor():
 
         cursor.execute("INSERT INTO login_data_doctor (fullname, d_email, d_number, experience, qualification, specialist, city, d_gender, password, hospital, address) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
                        (f_name, d_email, d_number, yoe, qualification, specialist, city, gender, d_hashed_password, hospital_name, hospital_address))
-        conn.commit()
+        connection.commit()
         flash("Doctor registered successfully!", "success")
         return render_template('doctorregister.html')
     else:
