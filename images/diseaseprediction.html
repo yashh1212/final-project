@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="diseaseprediction.css">
+    <title>Heart disease prediction</title>
+</head>
+<body>
+<header class="header">
+    <a class="logo"><img src="images/logo1.png"></a>
+    <nav class="nav-items">
+      <a href="#">input Data</a>
+      <a href="#">Doctor</a>
+      <a href="#">About</a>
+
+    </nav>
+  </header>
+  
+<div class="container">
+    <h1>Input Your Heart Data</h1>
+    <form id="heartDiseaseForm">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="female">Transgender</option>
+        </select>
+        
+        <label for="chest pain type">Chest pain type:</label>
+        <input type="text" id="chest pain" name="chest pain" required>
+
+        <label for="Blood Pressure">Blood Pressure:</label>
+        <input type="number" id="blood Pressure" name="blood Pressure" required>
+
+        <label for="Cholestoral">Cholestoral:</label>
+        <input type="number" id="Cholestoral" name="Cholestoral" required>
+
+        <label for="Blood Sugar">Blood Sugar:</label>
+        <input type="number" id="blood sugar" name="blood sugar" required>
+
+        <label for="restecg">Restecg:</label>
+        <select id="restecg" name="restecg" required>
+            <option value="normal">0 (normal)</option>
+            <option value="having_st">1 (having ST-T)</option>
+            <option value="ventricular">2 (left ventricular hypertrophy)</option>
+        </select>
+
+        <label for="thalach">Thalach:</label>
+        <input type="number" id="thalach" name="thalach" required>
+
+        <label for="exang">Exang:</label>
+        <select id="exang" name="exang" required>
+            <option value="yes">1 (yes)</option>
+            <option value="no">0 (no)</option>
+        </select>
+
+        <label for="old peak">Old peak:</label>
+        <input type="number" id="old peak" name="old peak" required>
+
+        <label for="slope">Slope:</label>
+        <input type="number" id="slope" name="slope" required>
+
+        <label for="ca">Ca:</label>
+        <select id="ca" name="ca" required>
+            <option value="zero">0 </option>
+            <option value="one ">1</option>
+            <option value="two">2 </option>
+            <option value="three">3 </option>
+        </select>
+
+        <label for="thal">Thal:</label>
+        <select id="thal" name="thal" required>
+            <option value="one">1 (no blood flow in some part of body)</option>
+            <option value="two">2 (normal blood flow)</option>
+            <option value="three">3 (blood flow is obeserved but it is not normal)</option>
+        </select>
+
+        <label for="target">Target:</label>
+        <input type="number" id="target" name="target" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</div>
+</body>
+</html>
