@@ -366,12 +366,25 @@ app = Flask(__name__)
 app.secret_key = 'yash'
 
 conn = pymysql.connect(
-    host="localhost",
+    host="192.168.224.80",
     user="root",
     password="yash1212",
     database="user_info",
 )
 cursor = conn.cursor()
+
+# host = "localhost"
+# database = "user_info"
+# user = "postgres"
+# password = "yash1212"
+#
+# connection = psycopg2.connect(
+#         host=host,
+#         database=database,
+#         user=user,
+#         password=password
+#     )
+# cursor = connection.cursor()
 
 @app.route('/userlogin')
 def userregister():
@@ -896,4 +909,3 @@ def doctor_home():
     return render_template("doctorhomepage1.html", headings=heading, data=data,column=user)
 
        
-
