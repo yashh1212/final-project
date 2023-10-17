@@ -52,14 +52,21 @@
                       </div>
 
                   </div>
-                    <button><a href="/download" id="reset-button" style="text-decoration: none; color: inherit;">Download PDF</a></button>
+                    <button  href="/download" id="reset-button" class="button">
+
+                      <span class="button_lg">
+                          <span class="button_sl"></span>
+                          <span   class="button_text"><a href="/download" id="reset-button" style="text-decoration: none; color: inherit;">Download PDF</a></span>
+                      </span>
+                  </button>
 
                   </div>
 
 
 <header class="header">
+  <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">    
   <nav class="nav-items">
-  <a href="/">log out</a>
+  <a href="/" class="a">log out</a>
   </nav>
   </header>
 

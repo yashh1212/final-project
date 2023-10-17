@@ -9,35 +9,27 @@
 <body>
 
     <div class="container">
-                        <header>
+                        <header class="header">
                             <div class="logo">
                                 <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">   
+                                <a class="a" href="/">Logout</a>
+                                <a class="a1" href="#">Profile</a>
                         </div>
                             
-                            <h1>Welcome to Heart care</h1>
+                            <h1 class="h1" >Welcome to Heart care</h1>
                         </header>
-                        <nav>
-                            <ul>
-                                
-                                <li><a href="#">Profile</a></li>
-                                <lie><a href="/">Logout</a></lie>
-                            </ul>
-                        </nav>
-                        <main>
-                            <img src="doctor.png" alt="Your Company Logo">
-                            <p> * A healthy heart is a key to happiness in life.</p>
+        
+                        <main class="main">
+                            <p> * A healthy heart is key to happiness in life.</p>
                             <p> * A strong heart can more efficiently pump blood to deliver oxygen and nutrients to other parts of your body.</p>
                             <p> * A standard heart rate that ranges from 60 to 100 beats in a minute.</p>
                             <p> * Beauty is not in the face; beauty is a light in the heart.</p>
                             
-                    <nava>
-                    <ul>
-                        <li><a href="/predict_data">Predict your disease</a></li>
-                        <li><a href="/getappoinment">Get Your Appoinment</a></li>
+    
+                        <button><a href="/predict_data">Predict your disease</a></button>
+                        <button><a href="/getappoinment">Get Your Appoinment</a></button>
 
                         
-                    </ul>
-                    </nava>
                 </main>
             
         </div>

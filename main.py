@@ -359,14 +359,14 @@ def predict(a):
     if prediction[0] == 0:
         return "The person does not of have symptoms  heart disease."
     else:
-        return "The person has symptoms of  heart disease."
+        return "The person has symptoms of  heart disease. \n (we recommend you to contact with doctor)"
 
 
 app = Flask(__name__)
 app.secret_key = 'yash'
 
 conn = pymysql.connect(
-    host="192.168.224.80",
+    host="localhost",
     user="root",
     password="yash1212",
     database="user_info",
@@ -682,7 +682,8 @@ def login_validation():
                 # if send_otp:
                     session['first_name'] = user[0]
                     session['lastname'] = user[1]
-                    return render_template('userhomepage1.html')  
+                    return redirect("/userhome")
+                    # return render_template('userhomepage1.html')  
         else:
                 flash("password not match", "failed")
                 return render_template('userlogin.html')
@@ -707,7 +708,10 @@ def login_validation_otp():
         flash("user not found", "failed")
         return render_template('userlogin_otp.html')
         
-        
+
+@app.route('/userhome',methods=['POST','GET']) 
+def userhome():
+    return render_template('userhomepage1.html')      
         
 @app.route('/login_validation_doctor', methods=['POST','GET'])
 def login_validation_doctor():
@@ -760,7 +764,7 @@ def login_validation_otp_doctor():
 
 
 
-@app.route('/otp_verification', methods=['POST'])
+@app.route('/otp_verification', methods=['POST','GET'])
 def verify_otp():
     user_otp=request.form.get('user_otp')
     if(otp== user_otp):
@@ -781,7 +785,7 @@ def verify_otp_doctor():
 
 
 
-@app.route('/add_user', methods=['POST'])
+@app.route('/add_user', methods=['POST','GET'])
 def add_user():
    fname=request.form.get('firstname')
    lname=request.form.get('lastname')    
@@ -886,7 +890,7 @@ def add_patient_data():
         return render_template('userhomepage.html')
     
     
-@app.route('/user_homepage')
+@app.route('/user_homepage' ,methods=['GET', 'POST'])
 def user_homepage():
     return render_template("userhomepage1.html")
 
@@ -909,3 +913,8 @@ def doctor_home():
     return render_template("doctorhomepage1.html", headings=heading, data=data,column=user)
 
        
+
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

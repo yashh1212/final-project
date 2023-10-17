@@ -41,32 +41,35 @@
           <h2>Patient List</h2> 
          </div> 
 
-      <div class="container">
-        <form action="/doctor_home" method="POST">
-            <h2> </h2>
-            <div class="content"> 
-              <table class="table">
-                <tr  class="table_header">
-                    {% for name in headings %}
-                    <th class="table_cell">{{ name }}</th>
-                    {% endfor %}
-                </tr>
-                {% for column in data %}  
-                {% for row in data %}
-                    <tr class="table_row">
-                        {% for cell in row %}
-                        <td class="table_cell">{{ cell }}</td>
-                        {% endfor %}
-                    </tr>
-                {% endfor %}
-                {% endfor %}
-               </table>
-            </div>
-          
+         <div class="container">
+          <form action="/doctor_home" method="POST">
+              <h2> </h2>
+              <div class="content">
+                  <div class="table-wrapper">
+                      <table class="table">
+                          <tr class="table_header">
+                              {% for name in headings %}
+                              <th class="table_cell">{{ name }}</th>
+                              {% endfor %}
+                          </tr>
+                          {% for column in data %}
+                          {% for row in data %}
+                          <tr class="table_row">
+                              {% for cell in row %}
+                              <td class="table_cell">{{ cell }}</td>
+                              {% endfor %}
+                          </tr>
+                          {% endfor %}
+                          {% endfor %}
+                      </table>
+                  </div>
+              </div>
           </form>
       </div>
+      
 
     </main>
+    
 </body>
 
 </html>  

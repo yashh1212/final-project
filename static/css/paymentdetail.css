@@ -21,7 +21,8 @@ background-color: rgba(128, 128, 128, 0.5);
   width: 1550px;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to right,#4d174d,#5a2e49);
+  /* background-image: linear-gradient(to right,#4d174d,#5a2e49); */
+  background-color: #fff;
   /* background-color: #3eb489; */
 }
 
@@ -29,9 +30,8 @@ background-color: rgba(128, 128, 128, 0.5);
     display: flex;
     height: 60px;
     width: 60px;
-  margin-left: 15px;
-  background-blend-mode: multiply;
-  mix-blend-mode: multiply;
+  margin-left: 30px;
+
 }
 
 .nav-items {
@@ -41,15 +41,11 @@ background-color: rgba(128, 128, 128, 0.5);
   margin-right: 20px;
 }
 
-.nav-items a {
-  text-decoration: none;
-  color: #fff;
-  padding: 35px 20px;
-}
+
 
 .container{
     /* background-image: linear-gradient(to right,#4d174d,#5a2e49); */
-    background-color: #fff;
+    background-color: #daeae8;
     max-width: 750px;
     padding: 28px;
     margin:100px auto;
@@ -60,6 +56,12 @@ background-color: rgba(128, 128, 128, 0.5);
 }
 .container h2{
   color: black;
+}
+.a{
+  color: #000;
+  margin-right: 30px;
+  font-weight: bold;
+  font-size: large;
 }
 h1{
     position: absolute;
@@ -89,7 +91,12 @@ h2{
 
 .formbold-mb-5 {
     margin-bottom: 20px;
-    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    color: #07074d;
+    margin-left: 15px;
+    text-transform: uppercase;
+    margin: 20px 0;
   }
   .formbold-pt-3 {
     padding-top: 12px;
@@ -116,8 +123,13 @@ h2{
     display: block;
     font-weight: 500;
     font-size: 20px;
-    color: #0e0d0d;
     margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #07074d;
+    margin-left: 15px;
+    text-transform: uppercase;
+    margin: 20px 0;
   }
   .formbold-form-label-2 {
     font-weight: 600;
@@ -141,4 +153,126 @@ h2{
     border-color: #6a64f1;
     box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
   }
-.
+
+  .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-top: 50px;
+    margin-left: 280px;
+    border: none;
+    background: none;
+    color: #0f1923;
+    cursor: pointer;
+    position: relative;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all .15s ease;
+  }
+  
+  .button::before,
+  .button::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: calc(50% - 5px);
+    border: 1px solid #7D8082;
+    transition: all .15s ease;
+  }
+  
+  .button::before {
+    top: 0;
+    border-bottom-width: 0;
+  }
+  
+  .button::after {
+    bottom: 0;
+    border-top-width: 0;
+  }
+  
+  .button:active,
+  .button:focus {
+    outline: none;
+  }
+  
+  .button:active::before,
+  .button:active::after {
+    right: 3px;
+    left: 3px;
+  }
+  
+  .button:active::before {
+    top: 3px;
+  }
+  
+  .button:active::after {
+    bottom: 3px;
+  }
+  
+  .button_lg {
+    position: relative;
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #0f1923;
+    overflow: hidden;
+    box-shadow: inset 0px 0px 0px 1px transparent;
+  }
+  
+  .button_lg::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color: #0f1923;
+  }
+  
+  .button_lg::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 4px;
+    height: 4px;
+    background-color: #0f1923;
+    transition: all .2s ease;
+  }
+  
+  .button_sl {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: -1px;
+    left: -8px;
+    width: 0;
+    background-image: linear-gradient(to bottom right, #00c6ff,
+  #0072ff);
+    transform: skew(-15deg);
+    transition: all .2s ease;
+  }
+  
+  .button_text {
+    position: relative;
+  }
+  
+  .button:hover {
+    color: #0f1923;
+  }
+  
+  .button:hover .button_sl {
+    width: calc(100% + 15px);
+  }
+  
+  .button:hover .button_lg::after {
+    background-color: #fff;
+  }
+  

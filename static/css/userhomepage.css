@@ -7,19 +7,24 @@ body {
 .header {
     display: flex;
     position: fixed;
-    width: 1550px;;
+    width: 1550px;
+    height: 100px;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to right,#4d174d,#5a2e49);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
     
      /* background-color: #3eb489; */
   }
 
   .header .logo {
-      display: flex;
-    margin-left: 15px;
+    display: flex;
+    margin-left: 5px;
+    width: 100px;
+    height: 80px;
+    margin-left: 40px;
     background-blend-mode: multiply;
-    mix-blend-mode: multiply;
   }
   .nav-items {
     display: flex;
@@ -30,23 +35,27 @@ body {
 
   .nav-items a {
     text-decoration: none;
-    color: #fff;
+    color: #000000;
+    font-weight: bold;
     padding: 35px 20px;
   }
 .container {
     max-width: 600px;
     margin: 0 auto;
     padding: 100px;
-    background-color: #fff;
+    background: transparent;
+    background-color: #daeae8;;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
+
 h1 {
     text-align: center;
 }
 label {
     display: block;
     font-weight: bold;
+    width: 300px;
     margin-top: 10px;
 }
 input[type="text"],

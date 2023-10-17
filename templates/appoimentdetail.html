@@ -16,7 +16,7 @@
         
         <div class="container">
             <form  method="POST" action="/appointmentdeatil">
-                <h2>Patient Details</h2>
+                <h2 class= "h3">Patient Details</h2>
                 <form action="bookAppointment" method="post">
         
                     <label for="firstname">First Name:</label>
@@ -49,7 +49,7 @@
 
                     <div class="container1">
                     
-                        <h2>Appointment Date and Time</h2>
+                        <h2 class="h2">Appointment Date and Time</h2>
                         <label for="date">Select Date:</label>
                         <input type="date" id="date" name="date" required>
 
@@ -69,7 +69,20 @@
                         <option value="8:00 Pm  to 9:00 Pm">8:00 Pm  to  9:00 Pm</option>
 
                         </select>
-                        <button type="submit" >continue</button>
+                        <button class="continue-application">
+                          <div>
+                              <div class="pencil"></div>
+                              <div class="folder">
+                                  <div class="top">
+                                      <svg viewBox="0 0 24 27">
+                                          <path d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"></path>
+                                      </svg>
+                                  </div>
+                                  <div class="paper"></div>
+                              </div>
+                          </div>
+                          Continue Application
+                      </button>
                    
 
                     
@@ -79,7 +92,7 @@
 
                 <div class="header">
                     <header class="header">
-                      <a class="logo"><img src="heart.png"></a>
+                      <a class="logo"><img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">      
                       <nav class="nav-items">
                         <a href="#">Profile</a>
                         <a href="/">log out</a>

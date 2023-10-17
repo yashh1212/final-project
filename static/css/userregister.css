@@ -59,8 +59,9 @@ h2{
 }
 .gender{
     font-size: 16px;
-    
-    
+    position: absolute;
+    top: 50%;
+    left: 30%;
 }
 .input-box input{
     border-radius: 15px;
@@ -82,7 +83,8 @@ h2{
 .gender{
     color:  gainsboro;
     position: relative;
-    left: 80px;
+    top: 1%;
+    left: 35px;
 }
 .gender label ,.gender input{
     /* display: flex;
@@ -93,12 +95,13 @@ h2{
 }
 .gender label{
     display: flex;
-    margin-right: 470px;
+    margin-right: 170px;
 }
 .gender-title{
-    position: relative;
-    top: 70px;
-    right: 560px;
+    position: absolute;
+    top: 60px;
+    right: 50%;
+    font-weight: bold;
 }
 .alert{
 

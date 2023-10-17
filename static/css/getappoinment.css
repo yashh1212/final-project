@@ -3,6 +3,7 @@
 body {
   margin: 0;
   box-sizing: border-box;
+  width: 100;
   background-color: #a3d1d1;
 }
  
@@ -27,6 +28,10 @@ body {
   height: 70px;
   width: 100px;
   margin-left: 30px;
+}
+.msg{
+  margin-top: -50px;
+  margin-left: 570px;
 }
 
 .nav-items {
