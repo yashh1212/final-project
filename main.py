@@ -729,9 +729,6 @@ def login_validation_doctor():
                     session['full_name_doctor'] = user[0]
                     session['email_doctor'] = user[1]
                     
-                    # fn=session.get('first_name_doctor')
-                    # ln=session.get('lastname_doctor')
-                    # print(fn,ln)
                     
                     return redirect("/doctor_home")
         else:
